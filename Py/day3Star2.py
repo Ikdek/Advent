@@ -1,5 +1,5 @@
 import string,itertools
-f = open("inputDay3.txt", "r")
+f = open("C:/Users/srshi/Documents/Efficom 2023/Algo-Python/adventOfCode/Advent/inputDay3.txt", "r")
 list = []
 for i in f.read().splitlines():
     list.append(i)
@@ -30,4 +30,4 @@ for i in list:
         a += 1
 
 
-print(list)
+print(dicFin)

@@ -1,10 +1,12 @@
-f = open("inputDay2.txt", "r")
+file = open("C:/Users/srshi/Documents/Efficom 2023/Algo-Python/adventOfCode/Advent/inputDay2.txt", "r")
 list = []
-for i in f.read().splitlines():
-    if i == "\n":
-        pass
-    else:
-        list.append(i)
+def cleanUp(file):
+    for i in file.read().splitlines():
+        if i == "\n":
+            pass
+        else:
+            list.append(i)
+cleanUp(file)
 
 dic = {}
 dicScore = {
@@ -31,11 +33,13 @@ def winner(b,a):
             return 9
         elif b == "A":
             return 3
-y = 1
 
-for a in list:
-    dic[y] = a.split()
-    y += 1
+def splitToDic(list):
+    inc = 1
+    for a in list:
+        dic[inc] = a.split()
+        inc += 1
+splitToDic(list)
 score = 0
 
 for i in dic:
@@ -44,8 +48,6 @@ for i in dic:
         score += dicScore[dic[i][1]]
     else:
         score += winner(dic[i][0],dic[i][1])
-print(score)
+        
 
-print(winner('A',"Y"))
-print(winner("B",'X'))
-print(winner("C",'Z'))
+print(f"La somme des victoire donne un score de {score}")

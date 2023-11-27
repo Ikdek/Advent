@@ -1,4 +1,4 @@
-f = open("input.txt", "r")
+f = open("C:/Users/srshi/Documents/Efficom 2023/Algo-Python/adventOfCode/Advent/input.txt", "r")
 y = 1
 list = []
 dic = {}
